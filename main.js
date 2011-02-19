@@ -8,6 +8,24 @@ _gaq.push(['_trackPageview']);
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
-function yes() {
-    
+function onload() {
+    var audioSupported = false,
+        yes = document.getElementById('yes');
+    try {
+        audioSupported = !!(document.createElement('audio').canPlayType);
+    } catch(e) {
+        audioSupported = false;
+    }
+    if (audioSupported) {
+        var yesClip = document.createElement('audio');
+        yesClip.preload = 'auto';
+        yesClip.src = 'yes.mp3';
+        yes.addEventListener('click', function(e) {
+            yesClip.play();
+            return false;
+        }, false);
+        document.body.appendChild(yesClip);
+    } else {
+        yes.outerHTML = '"Yes"';
+    }
 }
