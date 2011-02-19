@@ -19,7 +19,7 @@ function onload() {
     if (audioSupported) {
         var yesClip = document.createElement('audio');
         yesClip.preload = 'auto';
-        yesClip.src = 'yes.mp3';
+        yesClip.src = 'yes.wav';
         yes.addEventListener('click', function(e) {
             yesClip.play();
             return false;
