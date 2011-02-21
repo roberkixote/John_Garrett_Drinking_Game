@@ -8,7 +8,8 @@ _gaq.push(['_trackPageview']);
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
-function onload() {
+function load() {
+    // Check for <audio> tag support, if so link "Yes" to sound byte of the allmighty John Garrett.
     var audioSupported = false,
         yes = document.getElementById('yes');
     try {
