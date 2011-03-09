@@ -116,4 +116,8 @@ div#container p {
     font-size: 12px;
     padding: 20px;
 }
+div#container .tribute {
+    border-radius: 10px;
+    background-color: #333;
+}
 a:link,a:visited ,a:hover ,a:active{ color: #00d9dc;}

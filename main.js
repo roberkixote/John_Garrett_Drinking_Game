@@ -18,14 +18,11 @@ function load() {
         audioSupported = false;
     }
     if (audioSupported) {
-        var yesClip = document.createElement('audio');
-        yesClip.preload = 'auto';
-        yesClip.src = 'yes.wav';
+        var yesClip = new Audio('yes.wav');
         yes.addEventListener('click', function(e) {
             yesClip.play();
             return false;
         }, false);
-        document.body.appendChild(yesClip);
     } else {
         yes.outerHTML = '"Yes"';
     }
